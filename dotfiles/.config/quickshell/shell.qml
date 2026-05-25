@@ -203,7 +203,7 @@ ShellRoot {
                         Layout.alignment: Qt.AlignVCenter
 
                         Repeater {
-                            model: 10
+                            model: 5
                             WorkspaceButton {
                                 required property int index
                                 number: index + 1
