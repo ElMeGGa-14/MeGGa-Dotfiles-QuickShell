@@ -1,0 +1,19 @@
+add_newline = false
+format = "$directory$git_branch$git_status$character"
+
+[directory]
+style = "bold #5fd0b5"
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+format = " [$symbol$branch]($style)"
+style = "#9db4ff"
+
+[git_status]
+format = " [$all_status$ahead_behind]($style)"
+style = "#f4a261"
+
+[character]
+success_symbol = "[>](bold #5fd0b5)"
+error_symbol = "[>](bold #f26d6d)"

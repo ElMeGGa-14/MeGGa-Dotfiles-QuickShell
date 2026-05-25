@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+mode="${1:-area}"
+dir="${XDG_PICTURES_DIR:-$HOME/Pictures}/Screenshots"
+mkdir -p "$dir"
+file="${dir}/shot-$(date +%Y%m%d-%H%M%S).png"
+
+case "$mode" in
+  full)
+    grim "$file"
+    ;;
+  area)
+    geometry="$(slurp)"
+    [[ -n "$geometry" ]] || exit 0
+    grim -g "$geometry" "$file"
+    ;;
+  edit)
+    geometry="$(slurp)"
+    [[ -n "$geometry" ]] || exit 0
+    grim -g "$geometry" - | swappy -f -
+    exit 0
+    ;;
+  *)
+    printf 'Uso: edots-screenshot [area|full|edit]\n' >&2
+    exit 1
+    ;;
+esac
+
+wl-copy < "$file" || true
+notify-send "Captura guardada" "$file" -a edots || true

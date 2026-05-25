@@ -1,0 +1,2 @@
+# Keep this file for packages you may want from AUR later.
+# The initial setup is intentionally pacman-only on modern Arch.

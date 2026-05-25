@@ -1,0 +1,64 @@
+# Base tools
+base-devel
+curl
+git
+iproute2
+jq
+libnotify
+sudo
+uwsm
+xdg-user-dirs
+xdg-utils
+
+# Hyprland desktop
+hyprland
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+hyprpaper
+hypridle
+hyprlock
+hyprsunset
+hyprpolkitagent
+
+# Quickshell and Qt
+quickshell
+qt6-declarative
+qt6-svg
+qt6-wayland
+qt6ct
+
+# Daily apps and desktop services
+gvfs
+gvfs-mtp
+kitty
+fuzzel
+mako
+nautilus
+networkmanager
+network-manager-applet
+bluez
+bluez-utils
+blueman
+pipewire
+pipewire-pulse
+wireplumber
+
+# Bar helpers and media controls
+brightnessctl
+cliphist
+grim
+hyprpicker
+pamixer
+pavucontrol
+playerctl
+slurp
+swappy
+wl-clipboard
+
+# Fonts and extras
+fastfetch
+imagemagick
+noto-fonts
+noto-fonts-emoji
+starship
+ttf-jetbrains-mono-nerd
